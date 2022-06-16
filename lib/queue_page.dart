@@ -26,11 +26,17 @@ class _QueuePageState extends State<QueuePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'PROCURANDO...',
                   style: TextStyle(color: Colors.white),
                 ),
+                TextButton(
+                  onPressed: () => {
+                    Navigator.pushNamed(context, 'join_call'),
+                  },
+                  child: const Text('página de entrar na chamada de vídeo'),
+                )
               ],
             ),
           ),
@@ -42,8 +48,9 @@ class _QueuePageState extends State<QueuePage> {
           children: [
             SizedBox(
               child: DecoratedBox(
-                decoration:
-                    BoxDecoration(color: Theme.of(context).primaryColor),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                ),
               ),
               width: double.infinity,
               height: 80,
@@ -53,8 +60,12 @@ class _QueuePageState extends State<QueuePage> {
               child: Expanded(
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      minimumSize: const Size(double.infinity, 60),
-                      side: BorderSide(width: 1.0, color: Colors.white)),
+                    minimumSize: const Size(double.infinity, 60),
+                    side: const BorderSide(
+                      width: 1.0,
+                      color: Colors.white,
+                    ),
+                  ),
                   onPressed: () {
                     // Navigator.pushNamed(context, 'payment');
                     Navigator.pop(context);

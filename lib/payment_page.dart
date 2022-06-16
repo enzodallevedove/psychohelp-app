@@ -7,10 +7,10 @@ class PaymentPage extends StatefulWidget {
   State<PaymentPage> createState() => _PaymentPageState();
 }
 
-enum AppointmentType { chat_appointment, video_appointment }
+enum AppointmentType { chatAppointment, videoAppointment }
 
 class _PaymentPageState extends State<PaymentPage> {
-  AppointmentType? _appointmentType = AppointmentType.chat_appointment;
+  AppointmentType? _appointmentType = AppointmentType.chatAppointment;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 ListTile(
                   title: const Text('Consulta por chat'),
                   leading: Radio<AppointmentType>(
-                    value: AppointmentType.chat_appointment,
+                    value: AppointmentType.chatAppointment,
                     groupValue: _appointmentType,
                     onChanged: (AppointmentType? value) {
                       setState(() {
@@ -38,7 +38,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 ListTile(
                   title: const Text('Consulta por vídeo'),
                   leading: Radio<AppointmentType>(
-                    value: AppointmentType.video_appointment,
+                    value: AppointmentType.videoAppointment,
                     groupValue: _appointmentType,
                     onChanged: (AppointmentType? value) {
                       setState(() {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:psychohelp/call_page.dart';
 import 'package:psychohelp/home_page.dart';
+import 'package:psychohelp/join_call_page.dart';
 import 'package:psychohelp/payment_page.dart';
 import 'package:psychohelp/queue_page.dart';
 
@@ -35,7 +37,9 @@ class _State extends State<MyApp> {
         'home': (context) => const HomePage(),
         'classification': (context) => const ClassificationPage(),
         'payment': (context) => const PaymentPage(),
-        'queue': (context) => const QueuePage()
+        'queue': (context) => const QueuePage(),
+        'join_call': (context) => const JoinCallPage(),
+        'call': (context) => const CallPage()
       },
     );
   }

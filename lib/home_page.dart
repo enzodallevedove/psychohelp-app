@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
           child: Container(
-        padding: EdgeInsets.only(left: 16.0, right: 16.0),
+        padding: const EdgeInsets.only(left: 16.0, right: 16.0),
         child: Card(
           child: SizedBox(
             height: 240,
